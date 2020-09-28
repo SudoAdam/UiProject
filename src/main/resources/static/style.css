@@ -1,24 +1,69 @@
 body {
     font-family: Helvetica, Verdana;
-    background-color: #d2d2d2;
+    background-color: #ffffff;
 }
 
 a {
     color: white;
     text-decoration: none;
-
+}
+.current {
+    color: black;
+}
+.logo{
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
+    height: 10vw;
 }
 
 #header {
+    margin: auto;
     float: left;
     height: 100%;
-    width: 250px;
+    width: 20%;
     background-color: #4EAD7B;
     position: fixed;
 }
 
 #menu {
-
-    font-size: 150%;
+    font-size: 2vw;
     padding: 40px;
 }
+ul li{
+    color: #9ED36A;
+}
+
+#pagecontent {
+    background-color: #ffffff;
+    width: 80%;
+    float: right;
+}
+
+#login {
+    text-align: right;
+    font-size: 1.5vw;
+    padding: 20px;
+}
+
+#banner {
+
+    text-align: center;
+    font-size: 250%;
+    color: #4EAD7B;
+    padding: 50px;
+
+}
+
+#intro {
+    color: dimgrey;
+    padding: 100px;
+    background-color: #F7F7F7;
+}
+
+#stats {
+    height: 400px
+}
+
