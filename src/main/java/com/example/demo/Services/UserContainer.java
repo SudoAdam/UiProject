@@ -8,21 +8,21 @@ public class UserContainer {
 
     public UserContainer() {}
 
+    public void addUser(User user) {
+        userList.add(user);
+    }
+
     public ArrayList<User> getAllUsers() {
         return this.userList;
     }
 
-    public User getUserByName(String name) {
+    public User getUserByID(String userID) {
         for (int i = 0; i < userList.size(); i++) {
-            if (userList.get(i).equals(name)) {
+            if (userList.get(i).getUserID().equals(userID)) {
                 return userList.get(i);
             }
         }
         return null;
-    }
-
-    public void addUser(User user) {
-        userList.add(user);
     }
 
     public void removeUser(User user) {

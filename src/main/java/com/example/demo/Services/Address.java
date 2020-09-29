@@ -30,7 +30,7 @@ public class Address {
         return zip;
     }
 
-    public void setAddress(String password, String road, int number, int zip, String region) {
+    public void setAddress(Password password, String road, int number, int zip, String region) {
         if (security.validate(password)) {
             this.road = road;
             this.number = number;

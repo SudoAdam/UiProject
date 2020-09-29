@@ -3,7 +3,7 @@ package com.example.demo.Services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ads {
+public class AdContainer {
 
     private List ads = new ArrayList<Ad>();
 
