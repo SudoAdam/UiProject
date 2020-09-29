@@ -40,11 +40,11 @@ public class MyController {
 
     @PostMapping ("/createUser")
     public String createUser (@RequestParam String name,@RequestParam String userID,@RequestParam int phoneNum,
-                        @RequestParam String street,@RequestParam int streetNum,@RequestParam String city,
+                        @RequestParam String street,@RequestParam int streetNum,
                               @RequestParam int zipcode,@RequestParam String password, Model model ){
-        User user = new User(name, userID, password, phoneNum, phoneNum, street, streetNum, zipcode, null);
-
-        return "createUser";
+        User user = new User(name, userID, password, phoneNum, phoneNum, street, streetNum, zipcode, "hovedstaden");
+        model.addAttribute("user",name);
+        return "confirmation";
     }
 
     @GetMapping ("/error")
