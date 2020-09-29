@@ -7,9 +7,9 @@ public class SystemController {
     LoggedInUser loggedInUser;
 
     public SystemController() {
-        adContainer = new AdContainer();
-        userContainer = new UserContainer();
-        loggedInUser = new LoggedInUser(adContainer, userContainer);
+            adContainer = new AdContainer();
+            userContainer = new UserContainer();
+            loggedInUser = new LoggedInUser(adContainer, userContainer);
     }
 
     public void login(String password, String name) {

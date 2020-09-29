@@ -11,13 +11,14 @@ public class User {
     private Phone phone;
     private Address address;
 
-    User(String name, String userID, String password, int number1, int number2, String road, int number, int zip, String region) {
+    public User(String name, String userID, String password, int number1, int number2, String road, int number, int zip, String region) {
         this.name = name;
         this.userID = userID;
         this.security = new Security(password);
         this.phone = new Phone(security, number1, number2);
         this.address = new Address(security, road, number, zip, region);
     }
+
 
     public String getUserID() {
         return userID;
