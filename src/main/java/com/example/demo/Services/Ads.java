@@ -12,7 +12,13 @@ public class Ads {
     }
 
     public void remove (int adID){
-        ads.remove(adID);
+
+        for (int i = 0; i < ads.size(); i++) {
+            if (ads.get(i).equals(adID)){
+                ads.remove(i);
+                break;
+            }
+        }
     }
 }
 

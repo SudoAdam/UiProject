@@ -57,6 +57,15 @@ public class Ad {
         this.adID = adID;
     }
 
+
+    public boolean equals(int adID) {
+        boolean equals = false;
+        if (this.adID == adID){
+            equals = true;
+        }
+        return equals;
+    }
+
     @Override
     public String toString() {
         return "Ad{" +
