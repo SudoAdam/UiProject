@@ -27,6 +27,10 @@ public class User {
         return name;
     }
 
+    public Boolean validatePassword(PasswordAttempt passwordAttempt) {
+        return security.validate(passwordAttempt);
+    }
+
     public void setName(PasswordAttempt passwordAttempt, String newName) {
         if (security.validate(passwordAttempt)) {
             this.name = newName;
