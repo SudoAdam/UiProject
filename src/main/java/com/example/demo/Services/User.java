@@ -6,21 +6,21 @@ public class User {
     private Phone phone;
     private String password;
 
-    public void setPassword(String password) {
-        this.password = password;
+    User(Address address, Phone phone) {
+        this.address = address;
+        this.phone = phone;
     }
 
-    public Boolean validatePassword (String atemptedPass){
+    public Boolean validatePassword (String attemptedPass){
         Boolean goodPass = false;
-        if (atemptedPass == this.password){
+        if (attemptedPass == this.password){
             goodPass = true;
         }
         return goodPass;
     }
 
-    User(Address address, Phone phone) {
-        this.address = address;
-        this.phone = phone;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }
