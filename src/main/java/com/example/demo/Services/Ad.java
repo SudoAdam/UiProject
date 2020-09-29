@@ -7,12 +7,14 @@ public class Ad {
     private LocalDate expDate;
     private String description;
     private String product;
+    private int adID;
 
-    public Ad(User user, LocalDate expDate, String description, String product) {
+    public Ad(User user, LocalDate expDate, String description, String product, int adID) {
         this.user = user;
         this.expDate = expDate;
         this.description = description;
         this.product = product;
+        this.adID = adID;
     }
 
     public User getUser() {
@@ -45,6 +47,14 @@ public class Ad {
 
     public void setProduct(String product) {
         this.product = product;
+    }
+
+    public int getAdID() {
+        return adID;
+    }
+
+    public void setAdID(int adID) {
+        this.adID = adID;
     }
 
     @Override
