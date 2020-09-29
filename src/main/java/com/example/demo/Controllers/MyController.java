@@ -1,15 +1,10 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Services.SystemController;
-import com.example.demo.Services.Address;
-import com.example.demo.Services.Phone;
-import com.example.demo.Services.Security;
-import com.example.demo.Services.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 
 @Controller
@@ -33,16 +28,13 @@ public class MyController {
     }
 
     @GetMapping ("/logIn")
-    public String logIn (@RequestParam String password, @RequestParam String username) {
-        if (systemController.login(password, username)) {
-            return "logIn";
-        } else {
-            return "error";
-        }
+    public String logIn () {
+        return "logIn";
     }
 
     @GetMapping ("/signUp")
-    public String signUp (){ return "signUp";
+    public String signUp (){
+        return "signUp";
     }
 
     @PostMapping ("/createUser")
@@ -75,13 +67,5 @@ public class MyController {
     public String Ads (){
         return "Ads";
     }
-
-
-
-
-
-
-
-
 
 }

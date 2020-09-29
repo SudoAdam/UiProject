@@ -9,7 +9,7 @@ public class Security {
     }
 
     public Boolean validate(PasswordAttempt passwordAttempt) {
-        if (this.password.equals(passwordAttempt.getPasswordAttempt())) {
+        if (this.password.equals(passwordAttempt.get())) {
             return true;
         } else {
             return false;

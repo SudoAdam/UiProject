@@ -24,9 +24,9 @@ public class SystemController {
         userFactory.createUser(name, password, number1, number2, road, number, zip, region);
     }
 
-    public void editUser() {}
-
-    public void deleteUser() {}
+    public void editUser(String name, int number1, int number2, String road, int number, int zip, String region) {
+        loggedInUser.editLoggedInUser(name, number1, number2, road, number, zip, region);
+    }
 
     public void createAd() {}
 

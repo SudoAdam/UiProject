@@ -2,12 +2,12 @@ package com.example.demo.Services;
 
 public class Phone {
 
-    private Security security;
+    // private Security security;
     private String number1;
     private String number2;
 
-    public Phone(Security security, int number1, int number2) {
-        this.security = security;
+    public Phone(int number1, int number2) {
+        // this.security = security;
         this.number1 = validateNumber(number1);
         this.number2 = validateNumber(number2);
     }
@@ -52,11 +52,9 @@ public class Phone {
         return number2;
     }
 
-    public void setNumbers(PasswordAttempt passwordAttempt, int number1, int number2) {
-        if (security.validate(passwordAttempt)) {
-            this.number1 = validateNumber(number1);
-            this.number2 = validateNumber(number2);
-        }
+    public void setNumbers(int number1, int number2) {
+        this.number1 = validateNumber(number1);
+        this.number2 = validateNumber(number2);
     }
 
 }

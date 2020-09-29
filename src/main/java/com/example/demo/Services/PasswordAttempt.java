@@ -8,7 +8,7 @@ public class PasswordAttempt {
         this.password = password;
     }
 
-    public String getPasswordAttempt() {
+    public String get() {
         return this.password;
     }
 }
