@@ -21,5 +21,4 @@ public class Security {
             this.password = newPassword;
         }
     }
-
 }

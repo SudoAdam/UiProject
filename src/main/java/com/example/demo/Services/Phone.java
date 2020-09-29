@@ -6,13 +6,13 @@ public class Phone {
     private String number1;
     private String number2;
 
-    public Phone(Security security, int number1, int number2) throws IllegalArgumentException {
+    public Phone(Security security, int number1, int number2) {
         this.security = security;
         this.number1 = validateNumber(number1);
         this.number2 = validateNumber(number2);
     }
 
-    private String validateNumber(int number) throws IllegalArgumentException {
+    private String validateNumber(int number) {
         // Regular number: '45136534' - 8 digits
         // Also valid number: '4598237423' - 10 digits
         // Invalid number: '5736'
@@ -24,7 +24,8 @@ public class Phone {
         } else if (String.valueOf(number).length() == 10 && String.valueOf(number).indexOf(0) == 4 && String.valueOf(number).indexOf(1) == 5) {
             numberLength = 10;
         } else {
-            throw new IllegalArgumentException("Number should be either 8 digits, or 10 with the country code 45!");
+            return "";
+            // throw new IllegalArgumentException("Number should be either 8 digits, or 10 with the country code 45!");
         }
 
         // Correct result format: '90 47 92 83'
