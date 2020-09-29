@@ -19,13 +19,15 @@ public class LoggedInUser {
         return loggedInUser;
     }
 
-    public void setLoggedInUser(String password, String name) {
+    public Boolean setLoggedInUser(String password, String name) {
         if (userContainer.getUserByName(name) != null) {
             User user = userContainer.getUserByName(name);
             if (user.validatePassword(passwordAttempt)) {
                 loggedInUser = user;
                 passwordAttempt = new PasswordAttempt(password);
+                return true;
             }
         }
+        return false;
     }
 }

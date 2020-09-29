@@ -1,5 +1,6 @@
 package com.example.demo.Controllers;
 
+import com.example.demo.Services.SystemController;
 import com.example.demo.Services.Address;
 import com.example.demo.Services.Phone;
 import com.example.demo.Services.Security;
@@ -13,6 +14,8 @@ import org.springframework.ui.Model;
 
 @Controller
 public class MyController {
+
+    private SystemController systemController = new SystemController();
 
     @GetMapping ("/")
     public String index (){
@@ -30,8 +33,12 @@ public class MyController {
     }
 
     @GetMapping ("/logIn")
-    public String logIn (){
-        return "logIn";
+    public String logIn (@RequestParam String password, @RequestParam String username) {
+        if (systemController.login(password, username)) {
+            return "logIn";
+        } else {
+            return "error";
+        }
     }
 
     @GetMapping ("/signUp")
