@@ -27,26 +27,20 @@ public class Phone {
             return "";
             // throw new IllegalArgumentException("Number should be either 8 digits, or 10 with the country code 45!");
         }
-
         // Correct result format: '90 47 92 83'
         // Also correct result format: '+45 28 47 27 48'
         String result = "";
         for (int i = 0; i < numberLength; i++) {
-
             // Add '+' if number is 10 digits
             if (numberLength == 10 && i == 0) {
                 result += "+";
             }
-
-            result += String.valueOf(number).charAt(i);
-
-            // Add whitespace after every second digit
+            // Add whitespace before every second digit and not the first iteration
             if (i % 2 == 0 && i != 0) {
                 result += " ";
             }
-
+            result += String.valueOf(number).charAt(i);
         }
-
         return result;
     }
 
