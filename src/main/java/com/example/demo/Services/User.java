@@ -20,4 +20,21 @@ public class User {
         }
     }
 
+    public void setPassword(String password, String newPassword) {
+        if (security.validate(password)) {
+            security.setPassword(password, newPassword);
+        }
+    }
+
+    public void setPhone(String password, int number1, int number2) {
+        if (security.validate(password)) {
+            phone.setNumbers(password, number1, number2);
+        }
+    }
+
+    public void setAddress(String password, String road, int number, int zip, String region) {
+        if (security.validate(password)) {
+            address.setAddress(password, road, number, zip, region);
+        }
+    }
 }

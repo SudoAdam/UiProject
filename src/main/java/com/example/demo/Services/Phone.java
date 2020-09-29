@@ -52,15 +52,11 @@ public class Phone {
         return number2;
     }
 
-    public void setNumber1(String password, int number) {
+    public void setNumbers(String password, int number1, int number2) {
         if (security.validate(password)) {
-            this.number1 = validateNumber(number);
+            this.number1 = validateNumber(number1);
+            this.number2 = validateNumber(number2);
         }
     }
 
-    public void setNumber2(String password, int number) {
-        if (security.validate(password)) {
-            this.number2 = validateNumber(number);
-        }
-    }
 }

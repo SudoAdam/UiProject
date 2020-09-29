@@ -18,39 +18,24 @@ public class Address {
         return road;
     }
 
-    public void setRoad(String password, String road) {
-        if (security.validate(password)) {
-            this.road = road;
-        }
-    }
-
     public String getRegion() {
         return region;
-    }
-
-    public void setRegion(String password, String region) {
-        if (security.validate(password)) {
-            this.region = region;
-        }
     }
 
     public int getNumber() {
         return number;
     }
 
-    public void setNumber(String password, int number) {
-        if (security.validate(password)) {
-            this.number = number;
-        }
-    }
-
     public int getZip() {
         return zip;
     }
 
-    public void setZip(String password, int zip) {
+    public void setAddress(String password, String road, int number, int zip, String region) {
         if (security.validate(password)) {
+            this.road = road;
+            this.number = number;
             this.zip = zip;
+            this.region = region;
         }
     }
 }
