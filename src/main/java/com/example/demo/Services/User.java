@@ -18,37 +18,42 @@ public class User {
         this.phone = new Phone(security, number1, number2);
         this.address = new Address(security, road, number, zip, region);
     }
+
     public String getUserID() {
         return userID;
     }
 
-    public void setName(Password password, String newName) {
-        if (security.validate(password)) {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(PasswordAttempt passwordAttempt, String newName) {
+        if (security.validate(passwordAttempt)) {
             this.name = newName;
         }
     }
 
-    public void setPassword(Password password, String newPassword) {
-        if (security.validate(password)) {
-            security.setPassword(password, newPassword);
+    public void setPassword(PasswordAttempt passwordAttempt, String newPassword) {
+        if (security.validate(passwordAttempt)) {
+            security.setPassword(passwordAttempt, newPassword);
         }
     }
 
-    public void addUserAd(Password password, Ad ad) {
-        if (security.validate(password)) {
+    public void addUserAd(PasswordAttempt passwordAttempt, Ad ad) {
+        if (security.validate(passwordAttempt)) {
             userAds.add(ad);
         }
     }
 
-    public void setPhone(Password password, int number1, int number2) {
-        if (security.validate(password)) {
-            phone.setNumbers(password, number1, number2);
+    public void setPhone(PasswordAttempt passwordAttempt, int number1, int number2) {
+        if (security.validate(passwordAttempt)) {
+            phone.setNumbers(passwordAttempt, number1, number2);
         }
     }
 
-    public void setAddress(Password password, String road, int number, int zip, String region) {
-        if (security.validate(password)) {
-            address.setAddress(password, road, number, zip, region);
+    public void setAddress(PasswordAttempt passwordAttempt, String road, int number, int zip, String region) {
+        if (security.validate(passwordAttempt)) {
+            address.setAddress(passwordAttempt, road, number, zip, region);
         }
     }
 }

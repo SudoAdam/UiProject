@@ -1,14 +1,14 @@
 package com.example.demo.Services;
 
-public class Password {
+public class PasswordAttempt {
 
     private String password;
 
-    public Password(String password) {
+    public PasswordAttempt(String password) {
         this.password = password;
     }
 
-    public String getPassword() {
+    public String getPasswordAttempt() {
         return this.password;
     }
 }

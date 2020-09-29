@@ -30,8 +30,8 @@ public class Address {
         return zip;
     }
 
-    public void setAddress(Password password, String road, int number, int zip, String region) {
-        if (security.validate(password)) {
+    public void setAddress(PasswordAttempt passwordAttempt, String road, int number, int zip, String region) {
+        if (security.validate(passwordAttempt)) {
             this.road = road;
             this.number = number;
             this.zip = zip;

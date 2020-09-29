@@ -8,16 +8,16 @@ public class Security {
         this.password = password;
     }
 
-    public Boolean validate(Password password) {
-        if (this.password.equals(password.getPassword())) {
+    public Boolean validate(PasswordAttempt passwordAttempt) {
+        if (this.password.equals(passwordAttempt.getPasswordAttempt())) {
             return true;
         } else {
             return false;
         }
     }
 
-    public void setPassword(Password password, String newPassword) {
-        if (this.validate(password)) {
+    public void setPassword(PasswordAttempt passwordAttempt, String newPassword) {
+        if (this.validate(passwordAttempt)) {
             this.password = newPassword;
         }
     }

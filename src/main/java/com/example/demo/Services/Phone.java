@@ -52,8 +52,8 @@ public class Phone {
         return number2;
     }
 
-    public void setNumbers(Password password, int number1, int number2) {
-        if (security.validate(password)) {
+    public void setNumbers(PasswordAttempt passwordAttempt, int number1, int number2) {
+        if (security.validate(passwordAttempt)) {
             this.number1 = validateNumber(number1);
             this.number2 = validateNumber(number2);
         }
