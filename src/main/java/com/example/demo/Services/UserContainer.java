@@ -6,7 +6,9 @@ public class UserContainer {
 
     private ArrayList<User> userList;
 
-    public UserContainer() {}
+    public UserContainer() {
+        userList = new ArrayList<User>();
+    }
 
     public void addUser(User user) {
         userList.add(user);
