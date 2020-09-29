@@ -46,10 +46,16 @@ public class MyController {
     }
 
     @PostMapping ("/createUser")
-    public String createUser (@RequestParam String name,@RequestParam String userID,@RequestParam int phoneNum,
-                        @RequestParam String street,@RequestParam int streetNum,
-                              @RequestParam int zipcode,@RequestParam String password, Model model ){
-        User user = new User(name, userID, password, phoneNum, phoneNum, street, streetNum, zipcode, "hovedstaden");
+    public String createUser (
+            @RequestParam String name,
+            @RequestParam String password,
+            @RequestParam int phoneNum,
+            @RequestParam String street,
+            @RequestParam int streetNum,
+            @RequestParam int zipcode,
+            Model model)
+    {
+        systemController.createUser(name, password, phoneNum, phoneNum, street, streetNum, zipcode, "Hovedstaden");
         model.addAttribute("user",name);
         return "confirmation";
     }

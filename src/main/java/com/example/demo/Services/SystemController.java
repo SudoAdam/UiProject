@@ -15,11 +15,7 @@ public class SystemController {
     }
 
     public Boolean login(String password, String name) {
-        if (loggedInUser.setLoggedInUser(password, name)) {
-            return true;
-        } else {
-            return false;
-        }
+        return loggedInUser.setLoggedInUser(password, name);
     }
 
     public void logout() {}
