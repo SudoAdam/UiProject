@@ -2,25 +2,22 @@ package com.example.demo.Services;
 
 public class User {
 
-    private Address address;
+    private String name;
+    private Security security;
     private Phone phone;
-    private String password;
+    private Address address;
 
-    User(Address address, Phone phone) {
-        this.address = address;
-        this.phone = phone;
+    User(String name, String password, int number1, int number2, String road, int number, int zip, String region) {
+        this.name = name;
+        this.security = new Security(password);
+        this.phone = new Phone(security, number1, number2);
+        this.address = new Address(security, road, number, zip, region);
     }
 
-    public Boolean validatePassword (String attemptedPass){
-        Boolean goodPass = false;
-        if (attemptedPass == this.password){
-            goodPass = true;
+    public void setName(String password, String newName) {
+        if (security.validate(password)) {
+            this.name = newName;
         }
-        return goodPass;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
 }
