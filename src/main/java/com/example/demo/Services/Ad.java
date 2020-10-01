@@ -21,4 +21,17 @@ public class Ad {
         this.product = product;
         this.adID = adID;
     }
+
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "name='" + name + '\'' +
+                ", adress='" + adress + '\'' +
+                ", phoneNum=" + phoneNum + " <br> " +
+                ", expDate=" + expDate +
+                ", description='" + description + '\'' +
+                ", product='" + product + '\'' +
+                ", adID=" + adID +
+                '}' ;
+    }
 }
