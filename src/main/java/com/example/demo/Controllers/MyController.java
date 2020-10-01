@@ -34,10 +34,8 @@ public class MyController {
     }
 
     @PostMapping ("/logedIn")
-    public String logedIn (@RequestParam String UserName, @RequestParam String passwordAttempt, Model model) {
-       systemController.login(passwordAttempt,UserName);
-
-        //model.addAttribute("users",names);  //are used to cast values into HTML
+    public String logedIn (@RequestParam String UserName, @RequestParam String passwordAttempt) {
+        systemController.login(passwordAttempt,UserName);
         return "logedIn";
     }
 
@@ -62,7 +60,9 @@ public class MyController {
     }
 
     @GetMapping ("/error")
-    public String error (){
+    public String error (Model model){
+        String names = systemController.showUser();
+        model.addAttribute("users",names);  //are used to cast values into HTML
         return "error";
     }
 
