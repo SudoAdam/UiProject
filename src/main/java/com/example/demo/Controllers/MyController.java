@@ -34,8 +34,10 @@ public class MyController {
     }
 
     @PostMapping ("/logedIn")
-    public String logedIn (@RequestParam String UserName, @RequestParam String passwordAttempt) {
+    public String logedIn (@RequestParam String UserName, @RequestParam String passwordAttempt, Model model) {
        systemController.login(passwordAttempt,UserName);
+
+        //model.addAttribute("users",names);  //are used to cast values into HTML
         return "logedIn";
     }
 
