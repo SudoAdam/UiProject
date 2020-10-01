@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
 
+import java.time.LocalDate;
+
 @Controller
 public class MyController {
 
@@ -74,6 +76,27 @@ public class MyController {
     @GetMapping ("/Ads")
     public String Ads (){
         return "Ads";
+    }
+
+    @GetMapping ("/signAdUp")
+    public String signAdUp (){
+        return "signAdUp";
+    }
+
+    @PostMapping ("/createAd")
+    public String createAd (
+            @RequestParam String name,
+            @RequestParam String adresse,
+            @RequestParam int phoneNum,
+            @RequestParam LocalDate expDate,
+            @RequestParam String description,
+            @RequestParam String product,
+            Model model)
+
+    {
+
+        model.addAttribute("user",name);
+        return "confirmation";
     }
 
 }

@@ -3,26 +3,47 @@ package com.example.demo.Services;
 import java.time.LocalDate;
 
 public class Ad {
-    private User user;
+
+    private String name;
+    private String adresse;
+    private int phoneNum;
     private LocalDate expDate;
     private String description;
     private String product;
     private int adID;
 
-    public Ad(User user, LocalDate expDate, String description, String product, int adID) {
-        this.user = user;
+    public Ad(String name, String adresse, int phoneNum, LocalDate expDate, String description, String product, int adID) {
+        this.name = name;
+        this.adresse = adresse;
+        this.phoneNum = phoneNum;
         this.expDate = expDate;
         this.description = description;
         this.product = product;
         this.adID = adID;
     }
 
-    public User getUser() {
-        return user;
+    public String getName() {
+        return name;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public int getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setPhoneNum(int phoneNum) {
+        this.phoneNum = phoneNum;
     }
 
     public LocalDate getExpDate() {
@@ -57,7 +78,6 @@ public class Ad {
         this.adID = adID;
     }
 
-
     public boolean equals(int adID) {
         boolean equals = false;
         if (this.adID == adID){
@@ -69,10 +89,13 @@ public class Ad {
     @Override
     public String toString() {
         return "Ad{" +
-                "user=" + user +
+                "name='" + name + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", phoneNum=" + phoneNum +
                 ", expDate=" + expDate +
                 ", description='" + description + '\'' +
-                ", product=" + product +
+                ", product='" + product + '\'' +
+                ", adID=" + adID +
                 '}';
     }
 }
