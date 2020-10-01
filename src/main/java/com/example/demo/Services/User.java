@@ -45,7 +45,7 @@ public class User {
         password = newPassword;
     }
 
-    public void addUserAd(Ad ad) {
+    public void addAd(Ad ad) {
         userAds.add(ad);
     }
 
@@ -55,5 +55,17 @@ public class User {
 
     public void setAddress(String road, int number, int zip, String region) {
         address.setAddress(road, number, zip, region);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", userID='" + userID + '\'' +
+                ", userAds=" + userAds +
+                ", password='" + password + '\'' +
+                ", phone=" + phone.toString() +
+                ", address=" + address.toString() +
+                '}';
     }
 }

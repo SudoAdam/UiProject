@@ -36,4 +36,14 @@ public class Address {
         this.zip = zip;
         this.region = region;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "road='" + road + '\'' +
+                ", region='" + region + '\'' +
+                ", number=" + number +
+                ", zip=" + zip +
+                '}';
+    }
 }
