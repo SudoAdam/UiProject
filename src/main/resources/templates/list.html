@@ -1,4 +1,4 @@
-<meta charset="UTF-8" xmlns:th="http://www.w3.org/1999/xhtml" />
+<meta charset="UTF-8">
 <title>List</title>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
@@ -30,42 +30,10 @@
         <h1>ANNONCE 2</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
----------dette er et test område------------
-
-        <div class="container">
-            <div th:if="${not #lists.isEmpty(products)}">
-                <h2>Product List</h2>
-                <table class="table table-striped">
-                    <tr>
-                        <th>Id</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Image URL</th>
-                        <th>List</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                    <tr th:each="product : ${products}">
-                        <td th:text="${product.id}"></td>
-                        <td th:text="${product.description}"></td>
-                        <td th:text="${product.price}"></td>
-                        <td th:text="${product.imageUrl}"></td>
-                        <td><a th:href="${'/product/show/' + product.id}">View</a> </td>
-                        <td><a th:href="${'/product/edit/' + product.id}">Edit</a> </td>
-                        <td><a th:href="${'/product/delete/' + product.id}">Delete</a> </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <a href="/createAd">Opret en ny annoce</a>
-                </div>
-            </div>
-        </div>
     </div>
+    <div id="stats">
 
-    ---------dette er et test område------------
-
+    </div>
     <footer class="footer">
         <div id="leftfoot">
             <a href="/">
