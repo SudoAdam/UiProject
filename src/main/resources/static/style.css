@@ -46,7 +46,7 @@ a:hover{
     margin: 0;
     float: left;
     height: 100%;
-    width: 20%;
+    width: 20vw;
     background-color: #4EAD7B;
     position: fixed;
 }
@@ -61,7 +61,7 @@ ul li{
 
 #pagecontent {
     background-color: #ffffff;
-    width: 80%;
+    width: 80vw;
     float: right;
 }
 .button{
@@ -130,8 +130,6 @@ ul li{
     width: 100%;
     height: 20vh;
     text-align: center;
-    position:absolute;
-    bottom:0;
 }
 
 #leftfoot {
