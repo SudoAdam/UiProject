@@ -1,14 +1,15 @@
 package com.example.demo.Services;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Ad {
+public class Ad implements Serializable {
 
-    private String name;
+    public String name;
     private String adress;
     private int phoneNum;
     private LocalDate expDate;
-    private String description;
+    public String description;
     private String product;
     private int adID;
 
