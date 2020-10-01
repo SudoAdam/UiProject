@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<header id="header">
+    <a href="/">
+        <img src="/images/leaf.png" width="100" height="100" class="logo">
+    </a>    <ul id="menu">
+        <li> <a href="/list">List</a></li>
+        <p></p>
+        <li> <a href="/map">Kort</a></li>
+        <p></p>
+        <li> <a href="/myAds">Mine annoncer</a></li>
+        <p></p>
+        <li> <a href="/signUp">Sign up</a></li>
+    </ul>
+</header>
+<div id="pagecontent">
+    <div id="login">
+        <a href="/logIn" class="current" > LOG IN </a>
+    </div>
+    <div id="banner">
+        <h1><b> sign up </b></h1>
+        <form action="/createAd" method=post>
+            <div id="fields">
+                <br> Bruger navn
+                <br>  <input type="text" name="name">
+                <br>  Password
+                <br> <input type="text" name="password">
+                <br> Vej navn
+                <br>  <input type="text" name="street">
+                <br> Vej nummer
+                <br>  <input type="number" name="streetNum">
+                <br> Post nummer
+                <br>  <input type="text" name="zipcode">
+                <br> Telefon nummer
+                <br>  <input type="date" name="phoneNum">
+                <div id="button">
+                    <input type="Submit" value="  Log in!  ">
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div id="leftfoot">
+            <a href="/">
+                <img src="/images/leaf.png" width="50" height="50">
+            </a><br>
+            <br>
+            <i>Copyright &copy 2020 Gruppe 2</i>
+        </div>
+        <div id="centerfoot">
+            <b>Sitemap</b>
+            <br>
+            <a href="/list"class="current">List</a>
+            <br>
+            <a href="/map"class="current">Kort</a>
+            <br>
+            <a href="/myAds"class="current">Mine annoncer</a>
+            <br>
+            <a href="/signUp"class="current">Sign up</a>
+        </div>
+        <div id="rightfoot">
+            Social
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
