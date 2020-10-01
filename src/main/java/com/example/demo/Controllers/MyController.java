@@ -1,12 +1,12 @@
 package com.example.demo.Controllers;
 
+import com.example.demo.Services.Ad;
 import com.example.demo.Services.SystemController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
-
 import java.time.LocalDate;
 
 @Controller
@@ -86,16 +86,18 @@ public class MyController {
     @PostMapping ("/createAd")
     public String createAd (
             @RequestParam String name,
-            @RequestParam String adresse,
+            @RequestParam String adress,
             @RequestParam int phoneNum,
-            @RequestParam LocalDate expDate,
-            @RequestParam String description,
+            @RequestParam String expDate,
             @RequestParam String product,
+            @RequestParam String description,
             Model model)
 
     {
-
-        model.addAttribute("user",name);
+        LocalDate exDate = LocalDate.parse(expDate);
+        System.out.printf("it werkin!");
+        Ad ad = new Ad(name, adress,phoneNum,exDate,description,product,1);
+        model.addAttribute("thing",product);
         return "confirmation";
     }
 
