@@ -30,11 +30,20 @@
         <table class="table table-striped">
             <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>product</th>
+                <th>description</th>
+                <th>name</th>
+                <th>adresse</th>
+                <th>expdate</th>
+                <th>phonenum</th>
             </tr>
             <tr th:each="ad : ${ads}">
+                <td th:text="${ad.product}"></td>
                 <td th:text="${ad.description}"></td>
                 <td th:text="${ad.name}"></td>
+                <td th:text="${ad.adress}"></td>
+                <td th:text="${ad.expDate}"></td>
+                <td th:text="${ad.phoneNum}"></td>
             </tr>
         </table>
     </div>

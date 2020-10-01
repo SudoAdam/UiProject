@@ -5,11 +5,11 @@ import java.time.LocalDate;
 
 public class Ad implements Serializable {
 
-    public String name;
+    private String name;
     private String adress;
     private int phoneNum;
     private LocalDate expDate;
-    public String description;
+    private String description;
     private String product;
     private int adID;
 
@@ -34,5 +34,33 @@ public class Ad implements Serializable {
                 ", product='" + product + '\'' +
                 ", adID=" + adID +
                 '}' ;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public int getPhoneNum() {
+        return phoneNum;
+    }
+
+    public LocalDate getExpDate() {
+        return expDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getProduct() {
+        return product;
+    }
+
+    public int getAdID() {
+        return adID;
     }
 }
