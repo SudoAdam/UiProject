@@ -1,5 +1,7 @@
 package com.example.demo.Services;
 
+import java.util.ArrayList;
+
 public class SystemController {
 
     AdContainer adContainer;
@@ -31,4 +33,8 @@ public class SystemController {
     public void createAd() {}
 
     public void deleteAd() {}
+
+    public ArrayList<User> showUser(){
+       return userContainer.getAllUsers();
+    }
 }
