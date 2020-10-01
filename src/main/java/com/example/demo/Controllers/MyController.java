@@ -22,7 +22,12 @@ public class MyController {
     }
 
     @GetMapping ("/list")
-    public String list (){
+    public String list (Model model){
+        for (int i = 0; i < adHandler.getAds().size() ; i++) {
+          adHandler.getAds().get(i);
+        }
+
+        model.addAttribute("users",names);
         return "list";
     }
 
@@ -102,7 +107,8 @@ public class MyController {
         adHandler.add(ad);
         String text = ad.toString();
         text = "jeg vil gerne <br> have 2 linier";
-        model.addAttribute("thing",text);
+        model.addAttribute("thing",product);
+        model.addAttribute("dis",description);
         return "confirmation";
     }
 
