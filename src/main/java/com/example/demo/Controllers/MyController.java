@@ -1,6 +1,7 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Services.Ad;
+import com.example.demo.Services.AdHandler;
 import com.example.demo.Services.SystemController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 public class MyController {
 
     private SystemController systemController = new SystemController();
+    AdHandler adHandler = new AdHandler();
 
     @GetMapping ("/")
     public String index (){
@@ -97,7 +99,10 @@ public class MyController {
         LocalDate exDate = LocalDate.parse(expDate);
         System.out.printf("it werkin!");
         Ad ad = new Ad(name, adress,phoneNum,exDate,description,product,1);
-        model.addAttribute("thing",product);
+        adHandler.add(ad);
+        String text = ad.toString();
+        text = "jeg vil gerne <br> have 2 linier";
+        model.addAttribute("thing",text);
         return "confirmation";
     }
 
