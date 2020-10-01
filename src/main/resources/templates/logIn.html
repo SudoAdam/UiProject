@@ -24,25 +24,24 @@
         <a href="/logIn" class="current" > LOG IN </a>
     </div>
     <div id="banner">
-        <form action="/loggedIn" method=post>
-            <div id="fields">
-                <br> Bruger navn
-                <br>  <input type="text" name="UserName">
-                <br>  Password
-                <br> <input type="text" name="passwordAttempt">
-                <div id="button">
-                    <input type="Submit" value="  Log in!  ">
-                </div>
-            </div>
-        </form>
+        <h1>LOG IN</h1>
     </div>
     <div id="intro">
-        <h1>VI Logger ind</h1>
-        <p>
-        </p>
+        <div id="fields">
+        <form action="/loggedIn" method=post>
+             Bruger navn
+            <br> <input type="text" name="UserName">
+            <p></p>  Password
+            <br> <input type="text" name="passwordAttempt">
+            <p><br></brZ></p><div id="button">
+                <input type="Submit" value="  Log in!  ">
+            </div>
+            <p></p><div><a href="signUp" class="currentgreen" >Ikke medlem? Sign up her!</a></div>
+    </form>
+    </div>
     </div>
     <div id="stats">
-        (STATISTICS)
+
     </div>
     <footer class="footer">
         <div id="leftfoot">
@@ -65,6 +64,11 @@
         </div>
         <div id="rightfoot">
             Social
+            <div class="social-btns">
+                <a class="btn facebook" href="#"><i class="fa fa-facebook"></i>
+                    <img src="/images/social.png" height="70"></a>
+
+            </div>
         </div>
     </footer>
 </div>
