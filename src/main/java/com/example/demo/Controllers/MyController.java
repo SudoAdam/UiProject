@@ -1,5 +1,6 @@
 package com.example.demo.Controllers;
 
+import com.example.demo.Services.LoggedInUser;
 import com.example.demo.Services.SystemController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +31,12 @@ public class MyController {
     @GetMapping ("/logIn")
     public String logIn () {
         return "logIn";
+    }
+
+    @PostMapping ("/logedIn")
+    public String logedIn (@RequestParam String UserName, @RequestParam String passwordAttempt) {
+       systemController.login(passwordAttempt,UserName);
+        return "logedIn";
     }
 
     @GetMapping ("/signUp")
