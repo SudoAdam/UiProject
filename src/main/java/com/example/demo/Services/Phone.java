@@ -57,4 +57,11 @@ public class Phone {
         this.number2 = validateNumber(number2);
     }
 
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "number1='" + number1 + '\'' +
+                ", number2='" + number2 + '\'' +
+                '}';
+    }
 }

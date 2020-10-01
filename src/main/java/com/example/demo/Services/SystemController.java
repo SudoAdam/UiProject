@@ -34,7 +34,14 @@ public class SystemController {
 
     public void deleteAd() {}
 
-    public ArrayList<User> showUser(){
-       return userContainer.getAllUsers();
+    public String showUser() {
+        ArrayList<User> users = userContainer.getAllUsers();
+
+        String result = "";
+        for (User user: users) {
+            result += user.toString() + "<br>";
+        }
+
+        return result;
     }
 }
