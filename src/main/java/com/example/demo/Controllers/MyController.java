@@ -25,9 +25,11 @@ public class MyController {
     public String list (Model model){
         for (int i = 0; i < adHandler.getAds().size() ; i++) {
           adHandler.getAds().get(i);
+            model.addAttribute("users");
+            return "list";
         }
 
-       // model.addAttribute("users",names);
+        model.addAttribute("users");
         return "list";
     }
 
@@ -62,8 +64,7 @@ public class MyController {
             @RequestParam int zipcode,
             Model model)
     {
-        systemController.createUser(name, password, phoneNum, phoneNum, street,
-                                    streetNum, zipcode, "Hovedstaden");
+        systemController.createUser(name, password, phoneNum, phoneNum, street, streetNum, zipcode, "Hovedstaden");
         model.addAttribute("user",name);
         return "confirmation";
     }
