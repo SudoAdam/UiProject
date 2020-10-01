@@ -63,7 +63,7 @@ public class MyController {
     public String error (Model model){
         String names = systemController.showUser();
         model.addAttribute("users",names);  //are used to cast values into HTML
-        return "error";
+        return "error2";
     }
 
 
