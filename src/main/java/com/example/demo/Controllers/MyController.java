@@ -1,6 +1,5 @@
 package com.example.demo.Controllers;
 
-import com.example.demo.Services.LoggedInUser;
 import com.example.demo.Services.SystemController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,10 +32,10 @@ public class MyController {
         return "logIn";
     }
 
-    @PostMapping ("/logedIn")
+    @PostMapping ("/loggedIn")
     public String logedIn (@RequestParam String UserName, @RequestParam String passwordAttempt) {
         systemController.login(passwordAttempt,UserName);
-        return "logedIn";
+        return "loggedIn";
     }
 
     @GetMapping ("/signUp")
@@ -61,7 +60,7 @@ public class MyController {
 
     @GetMapping ("/error")
     public String error (Model model){
-        String names = systemController.showUser();
+        String names = "virk for fucking heleved!" ; //= systemController.showUser();
         model.addAttribute("users",names);  //are used to cast values into HTML
         return "error2";
     }
