@@ -25,9 +25,11 @@ public class MyController {
     public String list (Model model){
         for (int i = 0; i < adHandler.getAds().size() ; i++) {
           adHandler.getAds().get(i);
+            model.addAttribute("users");
+            return "list";
         }
 
-        model.addAttribute("users",names);
+        model.addAttribute("users");
         return "list";
     }
 
