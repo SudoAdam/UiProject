@@ -8,74 +8,77 @@
 <header id="header">
     <a href="/">
         <img src="/images/leaf.png" width="100" height="100" class="logo">
-    </a>    <ul id="menu">
-        <li> <a href="/list">List</a></li>
+    </a>
+    <ul id="menu">
+        <li><a href="/list">List</a></li>
         <p></p>
-        <li> <a href="/map">Kort</a></li>
+        <li><a href="/map">Kort</a></li>
         <p></p>
-        <li> <a href="/myAds">Mine annoncer</a></li>
+        <li><a href="/myAds">Mine annoncer</a></li>
         <p></p>
-        <li> <a href="/signUp">Sign up</a></li>
+        <li><a href="/signUp">Sign up</a></li>
     </ul>
 </header>
 <div id="pagecontent">
     <div id="login">
-        <a href="/logIn" class="current" > LOG IN </a>
+        <a href="/logIn" class="current"> LOG IN </a>
     </div>
     <div id="banner">
         <h1><b> ANNONCER </b></h1>
     </div>
-    <div th:if="${not #lists.isEmpty(ads)}">
-        <h2>Counts List</h2>
-        <table class="table table-striped">
-            <tr>
-                <th>Id</th>
-                <th>product</th>
-                <th>description</th>
-                <th>name</th>
-                <th>adresse</th>
-                <th>expdate</th>
-                <th>phonenum</th>
-            </tr>
-            <tr th:each="ad : ${ads}">
-                <div id="adid"><td th:text="${ad.adID}"></td>
-                <br></div>
-                <td th:text="${ad.product}"></td>
-                <td th:text="${ad.description}"></td>
-                <td th:text="${ad.name}"></td>
-                <td th:text="${ad.adress}"></td>
-                <td th:text="${ad.expDate}"></td>
-                <td th:text="${ad.phoneNum}"></td>
-            </tr>
-        </table>
+    <div id="intro">
+        <div th:if="${not #lists.isEmpty(ads)}">
+            <h2>Counts List</h2>
+            <table class="content-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produkt</th>
+                    <th>Beskrivelse</th>
+                    <th>Navn</th>
+                    <th>Addresse</th>
+                    <th>Udløbsdato</th>
+                    <th>Telefon</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="ad : ${ads}">
+                    <td th:text="${ad.adID}"></td>
+                    <td th:text="${ad.product}"></td>
+                    <td th:text="${ad.description}"></td>
+                    <td th:text="${ad.name}"></td>
+                    <td th:text="${ad.adress}"></td>
+                    <td th:text="${ad.expDate}"></td>
+                    <td th:text="${ad.phoneNum}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div id="stats">
 
+<footer class="footer">
+    <div id="leftfoot">
+        <a href="/">
+            <img src="/images/leaf.png" width="50" height="50">
+        </a><br>
+        <br>
+        <i>Copyright &copy 2020 Gruppe 2</i>
     </div>
-    <footer class="footer">
-        <div id="leftfoot">
-            <a href="/">
-                <img src="/images/leaf.png" width="50" height="50">
-            </a><br>
-            <br>
-            <i>Copyright &copy 2020 Gruppe 2</i>
-        </div>
-        <div id="centerfoot">
-            <b>Sitemap</b>
-            <br>
-            <a href="/list"class="current">List</a>
-            <br>
-            <a href="/map"class="current">Kort</a>
-            <br>
-            <a href="/myAds"class="current">Mine annoncer</a>
-            <br>
-            <a href="/signUp"class="current">Sign up</a>
-        </div>
-        <div id="rightfoot">
-            Social
-        </div>
-    </footer>
+    <div id="centerfoot">
+        <b>Sitemap</b>
+        <br>
+        <a href="/list" class="current">List</a>
+        <br>
+        <a href="/map" class="current">Kort</a>
+        <br>
+        <a href="/myAds" class="current">Mine annoncer</a>
+        <br>
+        <a href="/signUp" class="current">Sign up</a>
+    </div>
+    <div id="rightfoot">
+        Social
+    </div>
+</footer>
 </div>
-
 </body>
 </html>
