@@ -18,7 +18,10 @@ public class MyController {
     private int counter = 0;
 
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
+      int size = adHandler.getSize();
+      model.addAttribute("activeAds",size);
+      model.addAttribute("totalAds",counter);
         return "index";
     }
 
