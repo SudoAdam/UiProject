@@ -12,6 +12,22 @@ public class AdHandler {
         ads.add(ad);
     }
 
+    public Ad getAdFromID(int adID) {
+
+        for (Ad ad: ads) {
+            if (ad.getAdID() == adID) {
+                return ad;
+            }
+        }
+        return null;
+
+    }
+
+    public void remove(int adID) {
+        Ad ad = getAdFromID(adID);
+        ads.remove(ad);
+    }
+
     public List<Ad> getAds() {
         return ads;
     }

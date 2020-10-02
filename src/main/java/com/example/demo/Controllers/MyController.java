@@ -15,6 +15,7 @@ import java.time.LocalDate;
 public class MyController {
 
     private AdHandler adHandler = new AdHandler();
+    private int counter = 0;
 
     @GetMapping("/")
     public String index() {
@@ -93,7 +94,7 @@ public class MyController {
             @RequestParam String description,
             Model model) {
         LocalDate exDate = LocalDate.parse(expDate);
-        Ad ad = new Ad(name, adress, phoneNum, exDate, description, product, 1);
+        Ad ad = new Ad(name, adress, phoneNum, exDate, description, product, ++counter);
         adHandler.add(ad);
         // model.addAttribute("ads", adHandler.getAds());
 
