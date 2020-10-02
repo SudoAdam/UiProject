@@ -38,6 +38,8 @@
                 <th>phonenum</th>
             </tr>
             <tr th:each="ad : ${ads}">
+                <div id="adid"><td th:text="${ad.adID}"></td>
+                <br></div>
                 <td th:text="${ad.product}"></td>
                 <td th:text="${ad.description}"></td>
                 <td th:text="${ad.name}"></td>
