@@ -97,5 +97,10 @@ public class MyController {
 
         return list(model);
     }
+    @PostMapping("/removeAd")
+    public String removeAd(@RequestParam int id){
+        adHandler.remove(id);
+        return "/list";
+    }
 
 }
