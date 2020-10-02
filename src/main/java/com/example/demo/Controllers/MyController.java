@@ -86,15 +86,13 @@ public class MyController {
     @PostMapping("/createAd")
     public String createAd(
             @RequestParam String name,
-            @RequestParam String adress,
+            @RequestParam String address,
             @RequestParam int phoneNum,
             @RequestParam String expDate,
             @RequestParam String product,
             @RequestParam String description,
             Model model) {
-        LocalDate exDate = LocalDate.parse(expDate);
-        Ad ad = new Ad(name, adress, phoneNum, exDate, description, product, 1);
-        adHandler.add(ad);
+        adHandler.create(name, address, phoneNum, expDate, description, product);
         // model.addAttribute("ads", adHandler.getAds());
 
         return list(model);
