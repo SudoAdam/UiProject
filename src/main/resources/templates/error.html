@@ -6,18 +6,61 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<div id="content">
-    Din idiot! <br>
-    <b th:text="${users}"/> <br>
-Der er sket en fejl!
-<br>
-    <img src="/images/leaf.png" width="100" height="100" class="logo">
-
-
-<a href="/">Gå tilbage til forsiden</a>
-
-
-
+<header id="header">
+    <a href="/">
+        <img src="/images/leaf.png" width="100" height="100" class="logo">
+    </a>
+    <ul id="menu">
+        <li><a href="/list">List</a></li>
+        <p></p>
+        <li><a href="/map">Kort</a></li>
+        <p></p>
+        <li><a href="/myAds">Mine annoncer</a></li>
+        <p></p>
+        <li><a href="/signUp">Sign up</a></li>
+    </ul>
+</header>
+<div id="pagecontent">
+    <div id="login">
+        <a href="/logIn" class="current"> LOG IN </a>
+    </div>
+    <div id="banner">
+        <h1><b> ERROR </b></h1>
+    </div>
+    <div id="intro">
+        <div id="fields">
+            Din idiot! <br>
+            <b th:text="${users}"/> <br>
+            Der er sket en fejl!
+            <br>
+            <a href="/"><img src="/images/leaf.png" width="100" height="100" class="logo"></a>
+            <a href="/" class="currentgreen">Gå tilbage til forsiden</a>
+        </div>
+    </div>
+    <div id="stats"></div>
+    <footer class="footer">
+        <div id="leftfoot">
+            <a href="/">
+                <img src="/images/leaf.png" width="50" height="50">
+            </a><br>
+            <br>
+            <i>Copyright &copy 2020 Gruppe 2</i>
+        </div>
+        <div id="centerfoot">
+            <b>Sitemap</b>
+            <br>
+            <a href="/list" class="current">List</a>
+            <br>
+            <a href="/map" class="current">Kort</a>
+            <br>
+            <a href="/myAds" class="current">Mine annoncer</a>
+            <br>
+            <a href="/signUp" class="current">Sign up</a>
+        </div>
+        <div id="rightfoot">
+            Social
+        </div>
+    </footer>
 </div>
 </body>
 </html>

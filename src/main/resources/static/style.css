@@ -4,9 +4,11 @@ html {
     height: 100%;
     overflow-x: hidden;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: Helvetica, Verdana;
     background-color: white;
@@ -15,35 +17,44 @@ body {
     height: 100vh;
     width: 100vw;
 }
+
 a {
     color: white;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: #9ED36A;
 }
+
 .current {
     color: dimgrey;
 }
-.current:hover{
+
+.current:hover {
     color: white;
 }
-.currentgreen{
+
+.currentgreen {
     color: dimgrey;
 }
-.currentgreen:hover{
+
+.currentgreen:hover {
     color: #9ED36A;
 }
-.logo{
+
+.logo {
     padding: 20px;
     display: block;
-    margin:auto;
+    margin: auto;
     width: 10vw;
     height: 10vw;
 }
+
 .logo:hover {
     opacity: 70%;
 }
+
 #header {
     margin: 0;
     float: left;
@@ -52,21 +63,26 @@ a:hover{
     background-color: #4EAD7B;
     position: fixed;
 }
+
 #menu {
     font-size: 2vw;
     padding: 40px;
 }
-ul li{
+
+ul li {
     color: #9ED36A;
 }
+
 #pagecontent {
     background-color: #ffffff;
     width: 80vw;
     float: right;
 }
-.button{
+
+.button {
 
 }
+
 #login {
     top: 0;
     right: 0;
@@ -79,9 +95,11 @@ ul li{
     font-size: 1.5vw;
     margin: 20px;
 }
-#login:hover{
+
+#login:hover {
     background-color: #9ED36A;
 }
+
 #banner {
     text-align: center;
     font-size: 250%;
@@ -89,9 +107,11 @@ ul li{
     padding: 50px;
 
 }
-#fields{
+
+#fields {
     text-align: center;
 }
+
 #intro {
     color: dimgrey;
     background-color: #F7F7F7;
@@ -99,6 +119,7 @@ ul li{
     margin-right: auto;
     padding: 100px
 }
+
 #stats {
     font-size: 3.5vh;
     color: #9ED36A;
@@ -106,41 +127,55 @@ ul li{
     width: 100%;
     text-align: center;
 }
+
 #members {
     float: left;
     width: 30vw;
 }
+
 #ad {
     text-align: center;
     display: inline-block;
-    margin:0 auto;
+    margin: 0 auto;
 }
+
 #foodsaved {
-    float:right;
+    float: right;
     width: 30vw;
 }
+
 .footer {
-    color:dimgrey;
+    color: dimgrey;
     padding: 50px;
     background-color: #F7F7F7;
     width: 100%;
     text-align: center;
 }
+
 #leftfoot {
     float: left;
     width: 20vw;
 }
+
 #centerfoot {
     text-align: left;
     display: inline-block;
-    margin:0 auto;
+    margin: 0 auto;
     width: 20vw;
     padding-left: 5vw;
     padding-right: 5vw;
 }
+
 #rightfoot {
-    float:right;
+    float: right;
     width: 20vw;
 }
 
-
+#fail {
+    color: dimgrey;
+    background-color: #F7F7F7;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px;
+    align-content: center;
+}

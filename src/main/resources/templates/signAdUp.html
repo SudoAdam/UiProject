@@ -9,41 +9,47 @@
 <header id="header">
     <a href="/">
         <img src="/images/leaf.png" width="100" height="100" class="logo">
-    </a>    <ul id="menu">
-        <li> <a href="/list">List</a></li>
+    </a>
+    <ul id="menu">
+        <li><a href="/list">List</a></li>
         <p></p>
-        <li> <a href="/map">Kort</a></li>
+        <li><a href="/map">Kort</a></li>
         <p></p>
-        <li> <a href="/myAds">Mine annoncer</a></li>
+        <li><a href="/myAds">Mine annoncer</a></li>
         <p></p>
-        <li> <a href="/signUp">Sign up</a></li>
+        <li><a href="/signUp">Sign up</a></li>
     </ul>
 </header>
 <div id="pagecontent">
     <div id="login">
-        <a href="/logIn" class="current" > LOG IN </a>
+        <a href="/logIn" class="current"> LOG IN </a>
     </div>
     <div id="banner">
-        <h1><b> Create add </b></h1>
-        <form action="/createAd" method=post>
-            <div id="fields">
-                <br> Navn
-                <br>  <input type="text" name="name">
-                <br>  Adresse
+        <h1><b> TILFØJ ANNONCE </b></h1>
+    </div>
+    <div id="intro">
+        <div id="fields">
+            <form action="/createAd" method=post>
+                Navn
+                <br> <input type="text" name="name">
+                <p></p> Adresse
                 <br> <input type="text" name="adress">
-                <br> Telefon nummer
-                <br>  <input type="text" name="phoneNum">
-                <br> Udløbsdato
-                <br>  <input type="date" name="expDate">
-                <br> Produkt type
-                <br>  <input type="text" name="product">
-                <br> Beskrivelse
-                <br>  <input type="text" name="description">
+                <p></p> Telefon nummer
+                <br> <input type="text" name="phoneNum">
+                <p></p> Udløbsdato
+                <br> <input type="date" name="expDate">
+                <p></p> Produkt type
+                <br> <input type="text" name="product">
+                <p></p> Beskrivelse
+                <br> <input type="text" name="description">
                 <div id="button">
-                    <input type="Submit" value="  Create add  ">
+                    <br><br><input type="Submit" value="  Create add  ">
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+    </div>
+    <div id="stats">
+
     </div>
     <footer class="footer">
         <div id="leftfoot">
@@ -56,13 +62,13 @@
         <div id="centerfoot">
             <b>Sitemap</b>
             <br>
-            <a href="/list"class="current">List</a>
+            <a href="/list" class="current">List</a>
             <br>
-            <a href="/map"class="current">Kort</a>
+            <a href="/map" class="current">Kort</a>
             <br>
-            <a href="/myAds"class="current">Mine annoncer</a>
+            <a href="/myAds" class="current">Mine annoncer</a>
             <br>
-            <a href="/signUp"class="current">Sign up</a>
+            <a href="/signUp" class="current">Sign up</a>
         </div>
         <div id="rightfoot">
             Social
