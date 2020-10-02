@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Stop Madspild</title>
@@ -38,11 +38,11 @@
             Active members
         </div>
         <div id="ad">
-            <h1>0</h1>
+            <h1 th:text="${activeAds}"/>
             Ads
         </div>
         <div id="foodsaved">
-            <h1>0</h1>
+            <h5 th:text="${totalAds}"/>
             Food saved
         </div>
     </div>
