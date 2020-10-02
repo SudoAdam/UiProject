@@ -3,7 +3,6 @@ package com.example.demo.Controllers;
 
 import com.example.demo.Services.Ad;
 import com.example.demo.Services.AdHandler;
-import com.example.demo.Services.SystemController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,13 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Controller
 public class MyController {
 
-    private SystemController systemController = new SystemController();
-    AdHandler adHandler = new AdHandler();
+    private AdHandler adHandler = new AdHandler();
 
     @GetMapping("/")
     public String index() {
@@ -40,17 +37,19 @@ public class MyController {
         return "logIn";
     }
 
+    /*
     @PostMapping("/loggedIn")
     public String logedIn(@RequestParam String UserName, @RequestParam String passwordAttempt) {
         systemController.login(passwordAttempt, UserName);
         return "loggedIn";
-    }
+    } */
 
     @GetMapping("/signUp")
     public String signUp() {
         return "signAdUp";
     }
 
+    /*
     @PostMapping("/createUser")
     public String createUser(
             @RequestParam String name,
@@ -63,30 +62,26 @@ public class MyController {
         systemController.createUser(name, password, phoneNum, phoneNum, street, streetNum, zipcode, "Hovedstaden");
         model.addAttribute("user", name);
         return "confirmation";
-    }
+    } */
 
     @GetMapping("/error")
     public String error(Model model) {
         String names = "virk for fucking heleved!"; //= systemController.showUser();
         model.addAttribute("users", names);  //are used to cast values into HTML
-        return "error2";
+        return "error";
     }
 
-
+    /*
     @GetMapping("/myAds")
     public String myAds() {
         return "myAds";
-    }
+    } */
 
+    /*
     @GetMapping("/Ads")
     public String Ads() {
         return "Ads";
-    }
-
-    @GetMapping("/signAdUp")
-    public String signAdUp() {
-        return "signAdUp";
-    }
+    } */
 
     @PostMapping("/createAd")
     public String createAd(
@@ -100,7 +95,7 @@ public class MyController {
         LocalDate exDate = LocalDate.parse(expDate);
         Ad ad = new Ad(name, adress, phoneNum, exDate, description, product, 1);
         adHandler.add(ad);
-//        model.addAttribute("ads", adHandler.getAds());
+        // model.addAttribute("ads", adHandler.getAds());
 
         return list(model);
     }

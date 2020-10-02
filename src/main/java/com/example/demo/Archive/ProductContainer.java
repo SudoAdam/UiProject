@@ -1,7 +1,6 @@
-package com.example.demo.Services;
+package com.example.demo.Archive;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ProductContainer {
 
