@@ -31,4 +31,8 @@ public class AdHandler {
     public List<Ad> getAds() {
         return ads;
     }
+
+    public int getSize() {
+        return ads.size();
+    }
 }
