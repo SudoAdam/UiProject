@@ -21,9 +21,9 @@ public class MyController {
 
     @Autowired
     public MyController() {
-        adHandler.add(new Ad("Patrick", "Kastrupvej 54", 43787345, LocalDate.of(2020,9,8), "Jeg kan ikke tåle Tomater!", "Tomater", ++counter));
-        adHandler.add(new Ad("Thomas", "Bogensevej 123", 32860534, LocalDate.of(2020,9,6), "Banerne er kun lidt brune", "Bananer", ++counter));
-        adHandler.add(new Ad("Adam", "Tangentvej 4", 98237864, LocalDate.of(2020,9,11), "Jeg hader radisser", "Radisser", ++counter));
+        adHandler.add(new Ad("Patrick", "Kastrupvej 54", 43787345, LocalDate.of(2020,9,22), "Jeg kan ikke tåle Tomater!", "Tomater", ++counter));
+        adHandler.add(new Ad("Thomas", "Bogensevej 123", 32860534, LocalDate.of(2020,9,2), "Banerne er kun lidt brune", "Bananer", ++counter));
+        adHandler.add(new Ad("Adam", "Tangentvej 4", 98237864, LocalDate.of(2020,10,1), "Jeg hader radisser", "Radisser", ++counter));
         adHandler.add(new Ad("Kasper", "Pytagorasvej 87", 21985413, LocalDate.of(2020,10,7), "Har 4 poser jeg ikke skal bruge", "Kartoffler", ++counter));
     }
 
