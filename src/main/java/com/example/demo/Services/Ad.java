@@ -33,7 +33,7 @@ public class Ad implements Serializable {
                 ", description='" + description + '\'' +
                 ", product='" + product + '\'' +
                 ", adID=" + adID +
-                '}' ;
+                '}';
     }
 
     public String getName() {

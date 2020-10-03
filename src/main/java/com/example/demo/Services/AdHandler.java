@@ -8,13 +8,13 @@ public class AdHandler {
 
     private final ArrayList<Ad> ads = new ArrayList<Ad>();
 
-    public void add (Ad ad){
+    public void add(Ad ad) {
         ads.add(ad);
     }
 
     public Ad getAdFromID(int adID) {
 
-        for (Ad ad: ads) {
+        for (Ad ad : ads) {
             if (ad.getAdID() == adID) {
                 return ad;
             }

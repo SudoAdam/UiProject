@@ -19,9 +19,9 @@ public class MyController {
 
     @GetMapping("/")
     public String index(Model model) {
-      int size = adHandler.getSize();
-      model.addAttribute("activeAds",size);
-      model.addAttribute("totalAds",counter);
+        int size = adHandler.getSize();
+        model.addAttribute("activeAds", size);
+        model.addAttribute("totalAds", counter);
         return "index";
     }
 
@@ -103,12 +103,14 @@ public class MyController {
 
         return list(model);
     }
+
     @GetMapping("/removeAd")
     public String remove() {
         return "removeAd";
     }
+
     @PostMapping("/removedAd")
-    public String removeAd(@RequestParam int id){
+    public String removeAd(@RequestParam int id) {
         adHandler.remove(id);
         return "/list";
     }
