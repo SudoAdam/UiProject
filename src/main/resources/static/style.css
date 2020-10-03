@@ -93,6 +93,22 @@ a:hover {
     border-radius: 0 0 5px 5px;
 }
 
+.button {
+    clear: both;
+}
+
+#formleft {
+    float: left;
+    align-content: center;
+    margin-left: 25vw;
+}
+
+#formright {
+    float: right;
+    align-content: center;
+    margin-right: 25vw;
+}
+
 #header {
     margin: 0;
     float: left;
@@ -217,3 +233,6 @@ ul li {
     padding: 100px;
     align-content: center;
 }
+
+
+

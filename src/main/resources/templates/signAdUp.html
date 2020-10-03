@@ -23,25 +23,29 @@
         <a href="/logIn" class="current"> LOG IN </a>
     </div>
     <div id="banner">
-        <h1><b> TILFØJ ANNONCE </b></h1>
+        <h1><b> OPRET ANNONCE </b></h1>
     </div>
     <div id="intro">
         <div id="fields">
             <form action="/createAd" method=post>
-                Navn
-                <br> <input type="text" name="name">
-                <p></p> Adresse
-                <br> <input type="text" name="adress">
-                <p></p> Telefon nummer
-                <br> <input type="text" name="phoneNum">
-                <p></p> Udløbsdato
-                <br> <input type="date" name="expDate">
-                <p></p> Produkt type
-                <br> <input type="text" name="product">
-                <p></p> Beskrivelse
-                <br> <input type="text" name="description">
-                <div id="button">
-                    <br><br><input type="Submit" value="  Create add  ">
+                <div id="formleft">
+                    Navn
+                    <br> <input type="text" name="name">
+                    <p></p>Adresse
+                    <br> <input type="text" name="adress">
+                    <p></p>Telefon nummer
+                    <br> <input type="text" name="phoneNum">
+                </div>
+                <div id="formright">
+                    Produkt type
+                    <br> <input type="text" name="product">
+                    <p></p>Beskrivelse
+                    <br> <input type="text" placeholder="Max 50 tegn." name="description">
+                    <p></p>Udløbsdato
+                    <br> <input type="date" name="expDate">
+                </div>
+                <div class="button">
+                    <br><br><input type="Submit" value="Opret">
                 </div>
             </form>
         </div>
@@ -60,11 +64,11 @@
         <div id="centerfoot">
             <b>Sitemap</b>
             <br>
-            <a href="/map"class="current">Kort</a>
+            <a href="/map" class="current">Kort</a>
             <br>
-            <a href="/list"class="current">Annoncer</a>
+            <a href="/list" class="current">Annoncer</a>
             <br>
-            <a href="/signUp"class="current">Opret Annonce</a>
+            <a href="/signUp" class="current">Opret Annonce</a>
         </div>
         <div id="rightfoot">
             Social
