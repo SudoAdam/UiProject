@@ -3,6 +3,8 @@ package com.example.demo.Controllers;
 
 import com.example.demo.Services.Ad;
 import com.example.demo.Services.AdHandler;
+import javassist.LoaderClassPath;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +18,14 @@ public class MyController {
 
     private AdHandler adHandler = new AdHandler();
     private int counter = 0;
+
+    @Autowired
+    public MyController() {
+        adHandler.add(new Ad("Patrick", "Kastrupvej 54", 43787345, LocalDate.of(2020,10,8), "Jeg kan ikke tåle Tomater!", "Tomater", ++counter));
+        adHandler.add(new Ad("Thomas", "Bogensevej 123", 32860534, LocalDate.of(2020,10,6), "Banerne er kun lidt brune", "Bananer", ++counter));
+        adHandler.add(new Ad("Adam", "Tangentvej 4", 98237864, LocalDate.of(2020,10,11), "Jeg hader radisser", "Radisser", ++counter));
+        adHandler.add(new Ad("Kasper", "Pytagorasvej 87", 21985413, LocalDate.of(2020,10,7), "Har 4 poser jeg ikke skal bruge", "Kartoffler", ++counter));
+    }
 
     @GetMapping("/")
     public String index(Model model) {
