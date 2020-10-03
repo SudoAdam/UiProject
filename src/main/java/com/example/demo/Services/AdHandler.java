@@ -1,5 +1,6 @@
 package com.example.demo.Services;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,16 @@ public class AdHandler {
         ads.remove(ad);
     }
 
-    public List<Ad> getAds() {
+    public void removeIfExpired(ArrayList<Ad> ads){
+        for (int i = 0; i <ads.size() ; i++) {
+            if(ads.get(i).getExpDate().isBefore(LocalDate.now())){
+                ads.remove(i);
+            }
+
+        }
+    }
+
+    public ArrayList<Ad> getAds() {
         return ads;
     }
 
