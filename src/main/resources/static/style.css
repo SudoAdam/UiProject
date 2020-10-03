@@ -79,6 +79,7 @@ a:hover {
 }
 
 .content-table tbody tr {
+    background-color: rgba(0, 0, 0, 0.5);
     height: 50px;
 }
 
@@ -87,7 +88,7 @@ a:hover {
 }
 
 .content-table tbody tr:last-of-type {
-    border-radius: 0 0 5px 5px;
+    border-bottom: 3px  solid #4EAD7B;
 }
 
 .button {
