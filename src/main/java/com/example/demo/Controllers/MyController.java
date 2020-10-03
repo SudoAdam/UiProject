@@ -21,17 +21,17 @@ public class MyController {
 
     @Autowired
     public MyController() {
-        adHandler.add(new Ad("Patrick", "Kastrupvej 54", 43787345, LocalDate.of(2020,10,8), "Jeg kan ikke tåle Tomater!", "Tomater", ++counter));
-        adHandler.add(new Ad("Thomas", "Bogensevej 123", 32860534, LocalDate.of(2020,10,6), "Banerne er kun lidt brune", "Bananer", ++counter));
-        adHandler.add(new Ad("Adam", "Tangentvej 4", 98237864, LocalDate.of(2020,10,11), "Jeg hader radisser", "Radisser", ++counter));
+        adHandler.add(new Ad("Patrick", "Kastrupvej 54", 43787345, LocalDate.of(2020,9,8), "Jeg kan ikke tåle Tomater!", "Tomater", ++counter));
+        adHandler.add(new Ad("Thomas", "Bogensevej 123", 32860534, LocalDate.of(2020,9,6), "Banerne er kun lidt brune", "Bananer", ++counter));
+        adHandler.add(new Ad("Adam", "Tangentvej 4", 98237864, LocalDate.of(2020,9,11), "Jeg hader radisser", "Radisser", ++counter));
         adHandler.add(new Ad("Kasper", "Pytagorasvej 87", 21985413, LocalDate.of(2020,10,7), "Har 4 poser jeg ikke skal bruge", "Kartoffler", ++counter));
     }
 
     @GetMapping("/")
     public String index(Model model) {
-      int size = adHandler.getSize();
-      model.addAttribute("activeAds",size);
-      model.addAttribute("totalAds",counter);
+        int size = adHandler.getSize();
+        model.addAttribute("activeAds", size);
+        model.addAttribute("totalAds", counter);
         return "index";
     }
 
@@ -113,14 +113,22 @@ public class MyController {
 
         return list(model);
     }
+
     @GetMapping("/removeAd")
     public String remove() {
         return "removeAd";
     }
+
     @PostMapping("/removedAd")
-    public String removeAd(@RequestParam int id){
+    public String removeAd(@RequestParam int id) {
         adHandler.remove(id);
         return "/list";
     }
 
+    @GetMapping("/removeIfExpired")
+    public String removeIfExpired(Model model) {
+        adHandler.removeIfExpired(adHandler.getAds());
+        return "/list";
+
+    }
 }
