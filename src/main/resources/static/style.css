@@ -172,6 +172,7 @@ ul li {
 
 #intro {
     color: white;
+    text-shadow: 2px 2px #000000;
     margin-left: auto;
     margin-right: auto;
     padding: 100px
@@ -251,4 +252,8 @@ ul li {
     background-size: cover;
 }
 
-
+#backdrop {
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba( 0, 0, 0, 0.5);
+    padding: 20px;
+}
