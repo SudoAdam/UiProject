@@ -98,13 +98,13 @@ a:hover {
 #formleft {
     float: left;
     align-content: center;
-    margin-left: 25vw;
+    margin-left: 30%;
 }
 
 #formright {
     float: right;
     align-content: center;
-    margin-right: 25vw;
+    margin-right: 30%;
 }
 
 #header {
